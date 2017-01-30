@@ -1,0 +1,58 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+//create variable
+
+; int main() {
+	float baseWall, heightWall, areaWall, baseTriangle, heightToTip, heightToBaseTriangle, areaTriangle, baseWindow, heightWindow, areaWindow, areaTotal, paint;
+
+	cout << "Welcome to Paint Calculator 2017\n";
+
+	double num = 22.678
+		; cout << fixed << setprecision(3) << num << "\n";
+
+	const double SqFtPerCan = 400.0f;
+
+	//int baseWall =;
+	//int heightWall = 15;
+
+	 areaWall = (baseWall*heightWall); //Area of Rectangular Wall
+
+	; baseTriangle = baseWall;
+	; heightToBaseTriangle = heightWall
+		; areaTriangle = (baseTriangle*(heightToTip - heightToBaseTriangle)) / 2; //Area triangular roof section
+
+	//int baseWindow = 5;
+	//int heightWindow = 8;
+
+	areaWindow = (baseWindow*heightWindow) //Area window cutout
+
+		; areaTotal = ((areaWall + areaTriangle) - areaWindow);  //Total area wall without window
+
+	paint = (areaTotal / SqFtPerCan); //Paint required
+
+	cout << "How wide is the wall(in feet)?:";
+	cin >> baseWall;
+	cout << "and how high is the wall to the bottom of the roof?:"
+		; cin >> heightToBaseTriangle;
+	cout << "and what’s the top height of the roof:";
+	cin >> heightWall;
+
+	cout << "How wide is the window (in feet)?:"; //window dimensions
+	cin >> baseWindow;
+	cout << "and what is the window's height?:";
+	cin >> heightWindow;
+
+
+
+	//output results
+	cout << "a side wall that is" << baseWall << "wide and" << heightToBaseTriangle << "to the roof bottom and" << heightToTip << "tall roof top,";
+	cout << "containing a window that is" << baseWindow << "wide and" << heightWindow << "tall, has" << areaTotal << "of paintable wall and would require" << paint << "cans of paint(assuming that each can will cover 400 square feet of wall)";
+	//holds the console window open
+
+	system("pause");
+
+	return 0;
+}
