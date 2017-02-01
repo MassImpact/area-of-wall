@@ -1,0 +1,54 @@
+//Skyler Mitguard
+//COMP 250 
+//2/1/17
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+//create variable
+int main() {
+	float baseWall, heightToBaseTriangle, heightToTip, baseWindow, heightWindow;
+
+	cout << ("Welcome to Paint Calculator 2017!!\n");
+
+ const double SqFtPerCan = 400.0f;
+
+ cout << "How wide is the wall(in feet)?";
+ cin >> baseWall;
+
+double baseTriangle = baseWall;
+
+; cout << "and how high is the wall to the bottom of the roof?"
+; cin >> heightToBaseTriangle;
+
+;double areaWall = (baseWall*heightToBaseTriangle); //Area of Rectangular Wall
+
+cout << "and what is the top height of the roof";
+cin >> heightToTip;
+; double areaTriangle = (baseTriangle*(heightToTip - heightToBaseTriangle)) / 2; //Area triangular roof section
+
+cout << "How wide is the window (in feet)?"; //window dimensions
+cin >> baseWindow;
+
+cout << "and what is the window's height?";
+cin >> heightWindow;
+
+double areaWindow = (baseWindow*heightWindow) //Area window cutout
+
+; double areaTotal = ((areaWall + areaTriangle) - areaWindow);  //Total area wall without window
+
+double paint = (areaTotal / SqFtPerCan); //Paint required
+
+//output results
+cout << "A side wall that is\n\t " << baseWall << "' wide and\n\t " << heightToBaseTriangle << "' to the roof bottom and\n\t " << heightToTip << "' tall to the roof top,\n";
+cout << "containing a window that is\n\t " << baseWindow << "' wide and\n\t " << heightWindow << "' tall,\n has ";
+; cout << fixed << setprecision(2) << areaTotal << "' of paintable wall\n and would require " << paint << " cans of paint";
+"\n(assuming that each can will cover 400 square feet of wall).\n";
+	
+//holds the console window open
+cout << ("Thanks for using Paint Calculator 2017. Goodbye!!\n");
+
+system("pause");
+
+	return 0;
+}
